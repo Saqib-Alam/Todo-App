@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="myTodo d-flex flex-column justify-content-center align-items-center">
+        
+        <div class="todoBody">
+            <div class="d-flex justify-content-center">
+                <img class="todoLogo" src="todocheck-logo.png_w=1098&ssl=1" alt="">
+            </div>
+            <div class="todoSec d-flex">
+               <input class="todoInp px-2 mx-2" id="input" type="text">
+               <!-- <button class="mx-2" >ADD ITEM</button>
+               <button class="mx-2">DELETE ALL</button> -->
+               <button onclick="addTodo()" id="addBtn" class="fas fa-plus-square mx-2"></button>
+               <button id="delBtn" class="fas fa-trash-alt mx-2"></button>
+            </div>
+    
+            <div class="">
+                <ul class="listBox list-unstyled" id="list">
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./bootstrap-4.6.1-dist/js/jquery-3.5.1.slim.min.js"></script>
+<script src="./bootstrap-4.6.1-dist/js/popper.min.js"></script>
+<script src="./bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+</html>
