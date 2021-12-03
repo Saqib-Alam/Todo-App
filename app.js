@@ -1,20 +1,20 @@
 
 function addTodo(){
     var inp=document.getElementById('input');
+    if(inp.value.length>=1){
     var ulList=document.getElementById('list');
-    console.log(inp.value)
 
     var todoLi=document.createElement('li')
     var liTxt=document.createTextNode(inp.value);
     todoLi.appendChild(liTxt)
 
+    inp.value="";
 
     // creating Edit btn
     var editBtn=document.createElement('button');
     editBtn.setAttribute('onclick','editList(this)');
     editBtn.setAttribute('class','liBtn fas fa-edit')
 
-    // todoLi.appendChild(editBtn)
 
     // creating Del btn
     var delBtn=document.createElement('button');
@@ -23,13 +23,31 @@ function addTodo(){
 
     // todoLi.appendChild(delBtn)
 
-    var liBtnDiv=document.createElement('div');
+    var liBtnDiv=document.createElement('span');
     liBtnDiv.appendChild(editBtn);
     liBtnDiv.appendChild(delBtn)
 
-    liBtnDiv.setAttribute('class','liBtn')
+    liBtnDiv.setAttribute('class','liBtnBox')
     todoLi.appendChild(liBtnDiv)
-    // todoLi.firstChild.style.width=40+"px";
-    // console.log(todoLi.firstChild)
     ulList.appendChild(todoLi);
+    }
+
+    else{
+        alert("Don't leave the field Empty")
+    }
 }
+
+
+function delAll(){
+    var list=document.getElementById('list')
+    list.innerHTML="";
+}
+
+function delList(e){
+    e.parentNode.parentNode.remove();
+}
+
+function editList(e){
+    var editLi=prompt('Edit todo');
+    e.parentNode.previousSibling.nodeValue=editLi;
+    }

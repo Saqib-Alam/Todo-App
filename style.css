@@ -5,16 +5,13 @@
 }
 
 body{
-
-    /* background-color: #afd7e9 !important; */
-
     background-color: #fff;
 }
 
 .todoBody{
     border: 5px solid #DF010E;
-    width: 750px;
-    min-height: 550px !important;
+    width: 600px;
+    min-height: 600px !important;
     border-radius: 5px;
 }
 .todoLogo{
@@ -23,53 +20,34 @@ body{
 }
 
 .todoSec{
-    /* border: 5px solid #FED300; */
-
-    /* border: 5px solid #DF010E; */
     padding: 20px 10px 0 10px;
-    /* border-radius: 5px; */
 }
 
 .fas{
-    /* width: 110px;
-    height: 45px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
     border: none;
-    border-radius: 5px;
-    box-shadow: rgba(254, 211, 0, 0.2) 0px 2px 8px 0px;
-    background-color: #ffe14e; */
-
-    /* when uds icons */
-    font-size: 28px;
-    border: none;
-    /* color: #FED300; */
-
     color: #DF010E;
     background: transparent;
     width: 110px;
     height: 45px;
-
-
 }
 
+.inpBtn{
+    font-size: 28px;
+}
 
 .todoInp{
       width: 500px !important;
       height: 45px;
       border: none;
-      font-size: 18px !important;
+      font-size: 24px !important;
       font-weight: 600 !important;
-      /* border-bottom: 2px solid #009FE3; */
       border-bottom: 2px solid #000;
       background-color: transparent;
-    /* max-height: 70px; */
 }
 
 .todoInp:focus{
-    /* border: none !important; */
     outline: transparent;
-    /* box-shadow: rgba(0, 159, 227, 0.3) 0px 2px 8px 0px; */
 }
 
 
@@ -77,13 +55,35 @@ body{
 
     display: flex;
     margin: 5px 15px;
-    width: 500px !important;
-    background-color: burlywood;
+    width: 96% !important;
+    border-bottom: 1px solid black;
+    height: 50px;
+    padding: 60px auto;
     position: relative;
+    font-size: 20px;
 }
 
 
-.liBtn{
-    position: absolute;
-    right: 10px;
+.liBtnBox{
+    position: absolute !important;
+    top: 0px;
+    right: 5px;
+}
+
+
+@media screen and (max-width: 768px){
+    .todoBody{
+        width: 550px;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .todoBody{
+        width: 100%;
+    }
+
+    .todoInp{
+        width: 100% !important;
+    }
 }
