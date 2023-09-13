@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+
+}
+.myTodo{
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.todoBody{
+    border: 5px solid #000;
+    background-color: #fff;
+    width: 600px;
+    min-height: 550px !important;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    /* z-index: 1; */
+
+}
+.todoLogo{
+    width: 240px;
+    margin: 20px;
+}
+
+.todoSec{
+    padding: 20px 10px 0 10px;
+}
+
+.fas{
+    font-size: 20px;
+    border: none;
+    color: #DF010E;
+    background: transparent;
+    width: 110px;
+    height: 45px;
+}
+
+.inpBtn{
+    font-size: 28px;
+}
+
+.todoInp{
+      width: 500px !important;
+      height: 45px;
+      border: none;
+      font-size: 1.6rem !important;
+      font-weight: 500 !important;
+      border-bottom: 2px solid #000;
+      background-color: transparent;
+}
+
+.todoInp:focus{
+    outline: transparent;
+}
+
+
+.listBox li{
+
+    display: flex;
+    margin: 5px 15px;
+    width: 96% !important;
+    border-bottom: 1px solid black;
+    height: 50px;
+    padding: 60px auto;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+.liBtnBox{
+    position: absolute !important;
+    top: 0px;
+    right: 5px;
+}
+
+
+@media screen and (max-width: 768px){
+    .todoBody{
+        width: 550px;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .todoBody{
+        width: 80%;
+    }
+    .todoLogo{
+        width: 180px;
+    }
+    
+    .todoInp{
+        width: 100% !important;
+        font-size: 1.2rem !important;
+    }
+
+    .listBox li{
+        font-size: 1rem;
+    }
+    
+}
